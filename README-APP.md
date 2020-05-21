@@ -547,7 +547,53 @@ git commit -m  "ROUTER - Configuração base finalizada"
 
 ## [11.08 - ORGANIZAÇÃO, BOAS-PRÁTICAS E COMPONENTES DE ESTILO](https://xpcorp.gama.academy/aluno/aulas/36/85)
 
+1. Re-estruturação da aplicação.
+2. Estilização
+    - Ou através de CSS
+    - styled-components
+        - npm install styled-components
+        - Permite criar components de estilo
+        - Ao invés de criar um component e estilizar ele através de um className ou id.
+        - Já criamos um componente dentro dele
+        - E só importar o componente dentro do nosso componente padrão.
+    - styled - ANTES:
 
+        <>
+            <h1>Repositórios</h1>
+            <ul>
+                <li>Repositório 01</li>
+            </ul>
+        </>
+
+    - styled - DEPOIS:
+
+        <>
+            <S.Title>Repositórios</S.Title>
+            <S.List>
+                <S.ListItem>Repositório 01</S.ListItem>
+                <S.ListItem>Repositório 02</S.ListItem>
+            </S.List>
+        </>
+
+---
+
+## FINALIZAR - REVISÃO
+
+Nessa aula vimos:
+
+- **`Styled Components`**
+    - Componentes Estilos
+    - Como criar esses componentes
+    - Importá-los em nossos componentes
+    - Importar CSS normal
+---
+
+## GIT: 
+
+git commit -m  "COMPONENTES ESTILIZADOS - Styled-Components"
+
+
+---
 
 &nbsp;
 

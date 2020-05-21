@@ -1,4 +1,10 @@
+html, body{
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
+  background: rgba(128, 128, 128, 0.384);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
