@@ -454,6 +454,64 @@ git commit -m  "BIND DE PROPRIEDADES _ COMPONENTES CONTROLADO- useState como ún
 
 ## [11.06 - INSTALANDO E CONFIGURANDO O REACT-ROUTER-DOM](https://xpcorp.gama.academy/aluno/aulas/36/83)
 
+Pelo escopo do projeto, ao retornar os repositórios do usário, exibí-los em outra página.
+
+Criamos novo componente, e quando formos exportar vamos adotar um modelo diferente do 'App.js', o resultado é o mesmo.
+
+De:
+
+    import React from 'react';
+
+    function Repositories() {
+        return (
+            <h1>Repositories</h1>
+        )
+    }
+
+    export default Repositories;
+
+Vamos usar:
+
+    import React from 'react';
+
+    export default function Repositories() {
+        return (
+            <h1>Repositories</h1>
+        )
+    }
+
+---
+
+Instalção do plugin que nos permitirá alternar entre páginas, sem a necessidade de recarregar todo o conteúdo da aplicação, com os arquivos de javascript e de estilo, carregando somente o conteúdo.
+
+Ou seja, fazendo valer a intenção de que tenhamos uma SPA.
+
+**`npm install react-router-dom`**
+
+
+&nbsp;
+
+---
+
+## FINALIZAR - REVISÃO
+
+Nessa aula vimos:
+
+- **`BrowserRouter`**
+- **`Repositories`**
+    - criação de component para renderizar os repositórios GIT
+- **`router.js`**
+    - Estrura base para alterações de rota da aplicação.
+
+
+---
+
+## GIT: 
+
+git commit -m  "ROUTER - Estruturação para rotas SPA da aplicação"
+
+
+---
 
 &nbsp;
 
