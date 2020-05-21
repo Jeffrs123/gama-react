@@ -308,15 +308,151 @@ git commit -m  "APRESENTAÇÃO - JXS - SW - MANIFAST - ROBOTS.TXT, COMPONETIZAÇ
 
 ## [11.05 - CONSUMINDO DADOS DE UMA API](https://xpcorp.gama.academy/aluno/aulas/36/82)
 
+## 1 - Setar `valores do usuário`
+
+### O que são **`componentes controlados`**?
+
+O estado, sempre deve ser fonte principal de dados, de preferência `o estado deve ser a única de fonte de dados do seu aplicativo`.
+
+Chamativa de eventos no React
+camelCase - onChange
+onChange - Capturar qualquer alteração dentro do input e jogar na variavel do usuario. E pegar o valor do usuario e o jogar como valor do input.
+
+    const [ usuario, setUsuario ] = useState('');
+
+    return (
+        <>
+        <h1> { usuario } </h1>
+        <input 
+            className="usuarioInput" 
+            placeholder="Usuário." 
+            value={usuario}      
+            onChange={e => {
+                console.log(e.target.value); 
+                setUsuario(e.target.value);
+            }} 
+        /> 
+
+        <br />
+        
+        <button type="button">Pesquisar</button>
+        </>
+    );
+
+OBS: Essa situação devem ser feito com inputs, textarea, selects. Elementos que armazem algum tipo de estado interno.
+
+---
+
+## 2 - `Buscar o usuário no GITHUB`
+
+1. Colocar função dentro do botão pesquisar.
+
+    - onClick={handlePesquisa}
+
+    - pesquisar o usuário na API do GITHUB para retornar seus repositórios
+
+    - Vamos usar o Axis. 
+        - Poderíamos usar o JS Vanilla, JQuery.
+        - O Axis sempre retorna promises, e para usar é facil.
+        - importar na app
+        - atualizar a função que usará ele
+
+            `
+
+                const urlUserRepo = `https://api.github.com/users/${usuario}/repos`;
+
+                function handlePesquisa() {
+                    axios
+                    .get(urlUserRepo)
+                    .then(r => console.log("r", r.data))
+                    .catch(error => console.log(`O usuário ${usuario} ou NÃO EXISTE ou o nome está errado.`))
+                    ;
+                }
+            `
+
+2. Como usar pacote dentro do REACT - Instalar e usar
+
+    Assim, como existem várias bibliotecas em JS para agilizar o nosso trabalho.
+    Chamamos de pacotes.
+    Para fazer uso, utilizamos o terminal para instalar.
+    Eles são salvos na pasta do "node_modules".
+    Assim, sempre que atulizarmos a aplicação, e se tiver alguma alteração em tal pacote, ela ocorrerá no node_module.
+
+    - INSTALAR
+        - npm install <nome-do-pacote>
+
+    - USAR
+        - import axios from 'axios';
+        - Diferente de: import axios from './axios';
+            - com o uso de ./ o app busca arquivo na mesma pasta. 
+            - No caso queremos o pacote axios que foi salvo no node_modules.
+
+3. API do GITHUB
+    - https://api.github.com/users/{usuarioGitHub}
+        - Ex: https://api.github.com/users/Jeffrs123
+
+    -   {
+            "login": "Jeffrs123",
+            "id": 33886095,
+            "node_id": "MDQ6VXNlcjMzODg2MDk1",
+            "avatar_url": "https://avatars2.githubusercontent.com/u/33886095?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Jeffrs123",
+            "html_url": "https://github.com/Jeffrs123",
+            "followers_url": "https://api.github.com/users/Jeffrs123/followers",
+            "following_url": "https://api.github.com/users/Jeffrs123/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Jeffrs123/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Jeffrs123/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Jeffrs123/subscriptions",
+            "organizations_url": "https://api.github.com/users/Jeffrs123/orgs",
+            "repos_url": "https://api.github.com/users/Jeffrs123/repos",
+            "events_url": "https://api.github.com/users/Jeffrs123/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Jeffrs123/received_events",
+            "type": "User",
+            "site_admin": false,
+            "name": null,
+            "company": null,
+            "blog": "",
+            "location": null,
+            "email": null,
+            "hireable": null,
+            "bio": null,
+            "public_repos": 6,
+            "public_gists": 0,
+            "followers": 0,
+            "following": 0,
+            "created_at": "2017-11-22T03:05:11Z",
+            "updated_at": "2020-05-10T18:01:27Z"
+        }
 
 
+---
+## FINALIZAR - REVISÃO
+
+Nessa aula vimos:
+
+- **`Componentes Controlado`**
+    - value={usuario} onChange={e => setUsuario(e.target.value)} 
+- **`Métodos`**
+    - handlePesquisa
+- **`Requisições`**
+    - axios
+
+
+---
+
+## GIT: 
+
+git commit -m  "BIND DE PROPRIEDADES _ COMPONENTES CONTROLADO- useState como única Fonte de Dados, PACOTES EXTERNOS _ AXIO - Instalação e Uso, AXIO - Cosumindo APIs e Promises de retorno, CONSUMO API _ MÉTODOS - handlePesquisa"
+
+
+---
 
 &nbsp;
 
 ---
 
 ## [11.06 - INSTALANDO E CONFIGURANDO O REACT-ROUTER-DOM](https://xpcorp.gama.academy/aluno/aulas/36/83)
-
 
 
 &nbsp;
