@@ -521,6 +521,26 @@ git commit -m  "ROUTER - Estruturação para rotas SPA da aplicação"
 
 
 
+---
+
+## FINALIZAR - REVISÃO
+
+Nessa aula vimos:
+
+- **`Terminar a configuração do arquivo de Rota`**
+- **`Importar o arquivo de rotas dentro do app`**
+- **`Boas práticas - Component APP`**
+    - Deixar o Component APP como container principal da aplicação. E chamando as outras páginas, de acordo com a rota.
+
+
+---
+
+## GIT: 
+
+git commit -m  "ROUTER - Configuração base finalizada"
+
+
+---
 &nbsp;
 
 ---
