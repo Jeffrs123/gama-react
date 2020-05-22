@@ -730,6 +730,28 @@ git commit -m "TRATAMENTO DE ERROS - JavaScript"
 
 ## [11.13 - CONDITIONAL RENDERING](https://xpcorp.gama.academy/aluno/aulas/36/90)
 
+Renderização Condicional.
+O "se" mas usado com o operador ternário.
+
+
+---
+
+## FINALIZAR - REVISÃO
+
+Nessa aula vimos:
+
+- **`Tudo o que vimos até agora`**
+    - react-router-dom.
+    - Transição de telas sem **`refresh`**.
+
+
+---
+
+## GIT: 
+
+git commit -m "CONDITIONAL RENDERING"
+
+---
 
 
 &nbsp;

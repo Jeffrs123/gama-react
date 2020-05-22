@@ -9,29 +9,37 @@ function Home(props) {
   const [usuario, setUsuario] = useState('');
   const urlUserRepo = `https://api.github.com/users/${usuario}/repos`;
 
+  const [erro, setErro] = useState(false);
+
   function handlePesquisa() {
     console.log("urlUserRepo", urlUserRepo);
 
     axios
       .get(urlUserRepo)
-      .then( r => {
-          const repositories = r.data;
-          // console.log("r", r.data)
+      .then(r => {
+        const repositories = r.data;
+        // console.log("r", r.data)
 
-          const repositoriesName = [];
+        const repositoriesName = [];
 
-          repositories.map((repository) => {
-            return repositoriesName.push(repository.name)
-          });
-          // console.log("Nomes dos repositórios", repositoriesName)
-          // JSON.stringify(repositoriesName);
+        repositories.map((repository) => {
+          return repositoriesName.push(repository.name)
+        });
+        // console.log("Nomes dos repositórios", repositoriesName)
+        // JSON.stringify(repositoriesName);
 
-          localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));
-          // history.push('/repositories');
-          history.push('/repositories')
+        localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));
+        // history.push('/repositories');
+        setErro(false);
+        history.push('/repositories')
+      }
+      )
+      .catch(
+        error => {
+          console.log(`O usuário ${usuario} ou NÃO EXISTE ou o nome está errado. ${error}`);
+          setErro(true);
         }
       )
-      .catch(error => console.log(`O usuário ${usuario} ou NÃO EXISTE ou o nome está errado. ${error}`))
       ;
   }
 
@@ -45,6 +53,15 @@ function Home(props) {
       <S.Container2>
         <S.Button type="button" onClick={handlePesquisa}>Pesquisar</S.Button>
       </S.Container2>
+
+      {
+        !erro ?
+          '' :
+          <S.Container2>
+            <S.ErrorMsg>Ocorreu um erro. Tente novamente.</S.ErrorMsg>
+          </S.Container2>
+      }
+
     </S.Container>
   );
 }

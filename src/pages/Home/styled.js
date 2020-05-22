@@ -96,3 +96,20 @@ export const ListItem = styled.li`
     color: #fff;
     padding: .5rem;
 `
+
+export const ErrorMsg = styled.span`
+    // background-color: #000;
+    background-color: #fff;
+    // color: #fff;
+    // color: red;
+    color: #000;
+    box-shadow: 1px 1px 20px  0px red;
+    text-align: center;
+    margin: 1rem auto;
+    padding: .9rem;
+    border-radius: .50rem 00 .50rem;
+
+    // display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+`

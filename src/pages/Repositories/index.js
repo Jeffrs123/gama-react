@@ -23,7 +23,7 @@ export default function Repositories() {
         }
 
 
-    }, [])
+    }, [history])
 
     return (
         <S.Container>
@@ -32,7 +32,7 @@ export default function Repositories() {
                 {
                     repositories.map(repository => {
                         return (
-                            <S.ListItem> Repositório: {repository} </S.ListItem>
+                            <S.ListItem key={repository} > Repositório: {repository} </S.ListItem>
 
                         )
                     })
