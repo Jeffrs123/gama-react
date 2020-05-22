@@ -13,7 +13,7 @@ export default function Repositories() {
 
         setRepositories(repositoriesName);
         // localStorage.clear('repositoriesName');
-        localStorage.clear();
+        // localStorage.clear();
 
     }, [])
 
@@ -31,6 +31,7 @@ export default function Repositories() {
                 }
 
             </S.List>
+            <S.LinkHome to="/">Voltar</S.LinkHome>
         </S.Container>
     )
 }

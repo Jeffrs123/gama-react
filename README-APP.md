@@ -665,7 +665,7 @@ git commit -m  "STORAGE"
         - Ao inves de dizer, que é pra pegar o array, mapear ele, gerar os elementos html, inserir os elementos na página, inserir os valores;
         - Vamos dizer que se eu tiver algum elemento naquele array, que a aplicação imprima os elementos.
 
-     
+
 ---
 
 ## FINALIZAR - REVISÃO
@@ -696,6 +696,24 @@ git commit -m "HOOKS - useHistory e useEffect, RENDERIZANDO REPOSITÓRIOS, PROGR
 ## [11.11 - LINK REACT-ROUTER-DOM](https://xpcorp.gama.academy/aluno/aulas/36/88)
 
 
+---
+
+## FINALIZAR - REVISÃO
+
+Nessa aula vimos:
+
+- **`LINKS`**
+    - react-router-dom.
+    - Transição de telas sem **`refresh`**.
+
+
+---
+
+## GIT: 
+
+git commit -m "LINKS - Transição de telas sem refresh"
+
+---
 
 &nbsp;
 
