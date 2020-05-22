@@ -722,6 +722,7 @@ git commit -m "LINKS - Transição de telas sem refresh"
 ## [11.12 - TRATAMENTO DE ERROS E USEHISTORY](https://xpcorp.gama.academy/aluno/aulas/36/89)
 
 
+git commit -m "TRATAMENTO DE ERROS - JavaScript"
 
 &nbsp;
 
