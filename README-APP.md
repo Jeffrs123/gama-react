@@ -621,12 +621,12 @@ Nessa aula vimos:
     - Salvando apenas os nomes dentro de um array
     - E salvando os dados desse array no Storage do navegador.
 
-    
+
 ---
 
 ## GIT: 
 
-git commit -m  "COMPONENTES ESTILIZADOS - Styled-Components"
+git commit -m  "STORAGE"
 
 
 ---
@@ -637,6 +637,56 @@ git commit -m  "COMPONENTES ESTILIZADOS - Styled-Components"
 
 ## [11.10 - RENDERIZANDO REPOSITÓRIOS E PROGRAMAÇÃO DECLARATIVA](https://xpcorp.gama.academy/aluno/aulas/36/87)
 
+- **`useHistory`** - Alternar a página
+- **`Hook - useEffect`**
+    - Monitora mudança em cima de uma variável.
+    - Dispara função quando essa variável for alterada.
+    - Nos colchetes informo quais variáveis quero monitorar.
+    - Mas se quiser que o hook seja disparado logo de cara, é só deixar o array vazio.
+    - Vamos usar ele, e a partir dele recuperar os valores do localStorage.
+
+- Antigamente quando se usava **`Class Components`**
+    - tinha os ciclos de vida.
+        - Quando o componente era montado;
+        - Quando o componente era renderizado;
+        - Quando o componente ia ser destruído;
+- depois que começamos a usar as functions,
+    - agente não tem mais métodos (pq uma função não tem método)
+
+- **`Dois tipos de declaração IMPERATIVA e DECLARATIVA`** - Alternar a página
+
+    - **`IMPERATIVA`**
+        - É aquela que vimos no curso de JavaScript;
+        - Quando precisamos dizer tudo o que o computador precisa fazer;
+        - Construir o innerHTMl, fazer isso, aquilo, falar pra renderizar enfim...
+
+    - **`DECLARATIVA`**
+        - Falar pro computador, o que se espera.
+        - Ao inves de dizer, que é pra pegar o array, mapear ele, gerar os elementos html, inserir os elementos na página, inserir os valores;
+        - Vamos dizer que se eu tiver algum elemento naquele array, que a aplicação imprima os elementos.
+
+     
+---
+
+## FINALIZAR - REVISÃO
+
+Nessa aula vimos:
+
+- **`CONCEITOS DE PROGRAMAÇÃO DECLARATIVA`**
+    - Usandos dados do Storage do navegador.
+    - E detalhe, para limpar ele.
+- **`Novos Hooks`**
+    - useHistory
+    - useEffect
+
+
+---
+
+## GIT: 
+
+git commit -m "HOOKS - useHistory e useEffect, RENDERIZANDO REPOSITÓRIOS, PROGRAMAÇÃO DECLARATIVA"
+
+---
 
 
 &nbsp;

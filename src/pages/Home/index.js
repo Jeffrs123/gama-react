@@ -1,13 +1,17 @@
 import React, { useState } from 'react'; // import './App.css';
 import axios from 'axios';
 import * as S from './styled';
+import { useHistory } from 'react-router-dom';
 
 function Home(props) {
 
+  const history = useHistory();
   const [usuario, setUsuario] = useState('');
   const urlUserRepo = `https://api.github.com/users/${usuario}/repos`;
 
   function handlePesquisa() {
+    console.log("urlUserRepo", urlUserRepo);
+
     axios
       .get(urlUserRepo)
       .then( r => {
@@ -17,15 +21,17 @@ function Home(props) {
           const repositoriesName = [];
 
           repositories.map((repository) => {
-            repositoriesName.push(repository.name)
+            return repositoriesName.push(repository.name)
           });
           // console.log("Nomes dos repositórios", repositoriesName)
           // JSON.stringify(repositoriesName);
 
-          localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName))
+          localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));
+          // history.push('/repositories');
+          history.push('/repositories')
         }
       )
-      .catch(error => console.log(`O usuário ${usuario} ou NÃO EXISTE ou o nome está errado.`))
+      .catch(error => console.log(`O usuário ${usuario} ou NÃO EXISTE ou o nome está errado. ${error}`))
       ;
   }
 
