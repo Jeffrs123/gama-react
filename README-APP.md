@@ -601,7 +601,35 @@ git commit -m  "COMPONENTES ESTILIZADOS - Styled-Components"
 
 ## [11.09 - SALVANDO DADOS NO STORAGE](https://xpcorp.gama.academy/aluno/aulas/36/86)
 
+1. Agora, vamos pegar o que vem da tela de pesquisa
+2. Mandar pra tela de repositórios e Exibir os dados
+    - Usaramos o storage do navegador
 
+- **`STORAGE`** - É um armazenamento interno do navegador.
+    - Podemos armazernar localmente;
+    - Ou armazenar a sessão.
+
+---
+
+## FINALIZAR - REVISÃO
+
+Nessa aula vimos:
+
+- **`Storage`**
+    - Tratamento função handlePesquisa()
+    - pegando os dados da API do GITHUB
+    - Salvando apenas os nomes dentro de um array
+    - E salvando os dados desse array no Storage do navegador.
+
+    
+---
+
+## GIT: 
+
+git commit -m  "COMPONENTES ESTILIZADOS - Styled-Components"
+
+
+---
 
 &nbsp;
 

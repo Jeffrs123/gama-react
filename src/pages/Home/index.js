@@ -10,7 +10,21 @@ function Home(props) {
   function handlePesquisa() {
     axios
       .get(urlUserRepo)
-      .then(r => console.log("r", r.data))
+      .then( r => {
+          const repositories = r.data;
+          // console.log("r", r.data)
+
+          const repositoriesName = [];
+
+          repositories.map((repository) => {
+            repositoriesName.push(repository.name)
+          });
+          // console.log("Nomes dos repositórios", repositoriesName)
+          // JSON.stringify(repositoriesName);
+
+          localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName))
+        }
+      )
       .catch(error => console.log(`O usuário ${usuario} ou NÃO EXISTE ou o nome está errado.`))
       ;
   }
